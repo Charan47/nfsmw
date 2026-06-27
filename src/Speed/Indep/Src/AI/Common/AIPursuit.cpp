@@ -745,7 +745,7 @@ void AIPursuit::AssignCopOffset(int cop, Pursuers &assignCopList, const UMath::V
         ipv->SetInFormation(information);
         ipv->SetInPositionGoal(ipg);
     }
-}
+}// required for the controller to assign offsets to cops in a formation
 
 void AIPursuit::AssignChopperGoal(IPursuitAI *pursuitChopper) {
     if (IsAttemptingRoadBlock())
@@ -1039,7 +1039,7 @@ bool AIPursuit::SetupCollapse(const Pursuers &cops, int max_inner, float inner_r
 }
 
 static const UCrc32 kPullOverGoal = "AIGoalPullOver";
-
+// for vehicles more than the required formation
 void AIPursuit::AssignCopsInCircle(CopAndAngle *copangles, int num, float radius, const UMath::Vector3 &front, const UMath::Vector3 &side) {
     qsort(copangles, num, sizeof(CopAndAngle), CopAndAngleSortPredicate);
 

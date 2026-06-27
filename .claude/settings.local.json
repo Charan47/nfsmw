@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs grep:*)",
+      "Bash(find /x/P4Workspaces/NFSMWSourceCode/nfsmw/src -name \"*.cpp\" -exec grep -l \"AIPursuit::OnTask\" {} \\\\;)"
+    ]
+  }
+}
